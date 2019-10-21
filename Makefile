@@ -4,7 +4,16 @@ HelloWorld.class: HelloWorld.java Makefile
 	mv *.class org/demo/
 	java org.demo.HelloWorld
 
+StoringIntoKeyStore.class: StoringIntoKeyStore.java keystore
+	javac StoringIntoKeyStore.java
+	java StoringIntoKeyStore
+
+keystore:
+	@rm -f keystore
+	keytool -genseckey -alias 256bitkey -keyalg aes -keysize 256 \
+		-keystore keystore -storetype jceks -storepass changeit
+
 clean:
-	@rm -f *.class org/demo/*.class
+	@rm -f *.class org/demo/*.class keystore*
 
 .PHONY: clean
