@@ -10,7 +10,7 @@ import org.globalplatform.GPSystem;
 import org.globalplatform.SecureChannel;
 
 public class HelloWorldApplet extends Applet {
-    private static final byte[] helloWorld = {'a', 'p', 'p', 'l', 'e','s'};
+    private static final byte[] helloWorld = {'a', 'p', 'p', 'l', 'e','s','1'};
     private static final byte HW_CLA = (byte) 0x80;
     private static final byte HW_INS = (byte) 0x00;
 
